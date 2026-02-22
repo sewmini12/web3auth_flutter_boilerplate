@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.web3auth_flutter_boilerplate"
-    compileSdk = flutter.compileSdkVersion
+    compileSdkVersion 34
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

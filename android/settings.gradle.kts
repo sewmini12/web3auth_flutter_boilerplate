@@ -16,6 +16,14 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://jitpack.io")   // ✅ ADD THIS LINE
+    }
+}
 
 plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
