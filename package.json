@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@web3auth/xrpl-provider": "^9.7.0"
+  }
+}
