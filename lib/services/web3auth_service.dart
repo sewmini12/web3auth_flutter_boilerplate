@@ -19,7 +19,7 @@ class WalletService {
 
     if (Platform.isAndroid) {
       redirectUrl =
-          Uri.parse('w3a://com.example.web3auth_flutter_boilerplate/auth'); // change package name
+          Uri.parse('w3a://com.example.web3auth_flutter_boilerplate'); // change package name
     } else {
       redirectUrl =
           Uri.parse('com.example.web3auth_flutter_boilerplate://auth'); // change bundle id
@@ -43,10 +43,10 @@ class WalletService {
     return privateKey.isNotEmpty;
   }
 
-  /// Login with Google (you can extend later)
-  Future<Web3AuthResponse?> login() async {
+  /// Login with social providers
+  Future<Web3AuthResponse?> login(Provider loginProvider) async {
     return await Web3AuthFlutter.login(
-      LoginParams(loginProvider: Provider.google),
+      LoginParams(loginProvider: loginProvider),
     );
   }
 
